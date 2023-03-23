@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        VANTA.BIRDS({
+  el: "#vanta",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x9c00cf,
+  color1: 0xffffff,
+  color2: 0xff00ff,
+  colorMode: "lerp",
+  birdSize: 1.20,
+  wingSpan: 13.00,
+  speedLimit: 3.00,
+  separation: 100.00,
+  alignment: 1.00,
+  cohesion: 100.00
+})
+    })
+</script>
+</head>
 <body>
+    <div id="vanta">
+
+    </div>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
 </body>
