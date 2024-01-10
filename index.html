@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        VANTA.BIRDS({
-  el: "#vanta",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  backgroundColor: 0x9c00cf,
-  color1: 0xffffff,
-  color2: 0xff00ff,
-  colorMode: "lerp",
-  birdSize: 1.20,
-  wingSpan: 13.00,
-  speedLimit: 3.00,
-  separation: 100.00,
-  alignment: 1.00,
-  cohesion: 100.00
-})
-    })
-</script>
-</head>
 <body>
-    <div id="vanta">
+<title>Lorenzo Franco - Developer</title>
+<style type="text/css">
 
-    </div>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+</style>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+<div id="vanta-canvas"></div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.dots.min.js"></script>
+<script type="text/javascript">
+    VANTA.DOTS ({
+        el: "#vanta-canvas",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 900.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x8a00ff,
+        color2: 0x8500ff,
+        backgroundColor: 0x0,
+        size: 6.10,
+        spacing: 58.00
+    })
+
+    setTimeout(() => {
+                const main = document.querySelector('main')
+                main.style.opacity = 1;
+                main.style.filter = 'blur(0px)';
+            }, 1000)
+</script>
+
+
+    <div id="vanta"></div>
+    <main>
+        <header>
+            <img src="./Assets/Images/forassets.jpg">
+            <h1>Lorenzo Franco</h1>
+        </header>
+        <ul>
+            <li>
+                <a href="https://www.x.com/xeroxspectre"><img style="padding: 0.5em;" src="./Assets/Images/X-icon.png" alt="X" width="20">X</a>
+            </li>
+            <li>
+                <a href="https://www.Instagram.com/xeroxspectre"><img style="padding: 0.5em;" src="./Assets/Images/Instagram-icon.png" alt="Instagram" width="20" />Instagram</a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@the.og.italian.stallion"><img style="padding: 0.5em;" src="./Assets/Images/Tiktok-icon.png" alt="TikTok" width="25" />TikTok</a>
+            </li>
+            <li>
+                <a href="https://discordapp.com/users/465947778502230057"><img style="padding: 0.5em;" src="./Assets/Images/Discord-icon-removebg-preview.png" alt="Discord" width="25" />Discord</a>
+            </li>
+            <li>
+                <a href="https://github.com/LorenzoF765"><img style="padding: 0.5em;" src="./Assets/Images/Github-icon.png" alt="Github" width="20" />Github</a>
+            </li>
+            <li>
+                
+                <a href="https://www.linkedin.com/in/lorenzo-franco-3295a219b/"><img style="padding: 0.5em;" src="./Assets/Images/Linkedin-icon.png" alt="LinkedIn" width="20" />LinkedIn</a>
+            </li>
+        </ul>
+    </main>
 </body>
 </html>
