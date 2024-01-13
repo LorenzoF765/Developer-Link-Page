@@ -9,6 +9,7 @@ body {
     /* background: url(./Assets/Images/bg.png) repeat center center fixed; */
     background: black;
     background-size: cover;
+    overflow: hidden;
 }
 
 main {
