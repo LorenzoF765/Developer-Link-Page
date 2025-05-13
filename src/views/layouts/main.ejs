@@ -16,22 +16,23 @@
     </audio>
     <div id="vanta-canvas"></div> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.dots.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
     <script type="text/javascript">
-        VANTA.DOTS({
+        VANTA.NET({
             el: "#vanta-canvas",
             mouseControls: true,
             touchControls: true,
             gyroControls: true,
-            minHeight: 930.00,
+            minHeight: 200.00,
             minWidth: 200.00,
-            scale: 1.20,
-            scaleMobile: 1.20,
+            scale: 1.00,
+            scaleMobile: 1.00,
             color: 0x8a00ff,
-            color2: 0x8500ff,
             backgroundColor: 0x0,
-            size: 6.10,
-            spacing: 58.00
+            points: 15.00,
+            maxDistance: 25.00,
+            spacing: 18.00,
+            showDots: false
         })
 
         setTimeout(() => {
