@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Projects - Lorenzo Franco</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div id="vanta-canvas"></div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.dots.min.js"></script>
+    <script type="text/javascript">
+        VANTA.DOTS({
+            el: "#vanta-canvas",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: true,
+            minHeight: 930.00,
+            minWidth: 200.00,
+            scale: 1.20,
+            scaleMobile: 1.20,
+            color: 0x8a00ff,
+            color2: 0x8500ff,
+            backgroundColor: 0x0,
+            size: 6.10,
+            spacing: 58.00
+        })
+    </script>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./Assets/Images/NewMe.png" alt="Lorenzo Franco">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Project Name</h3>
+                    <p>Project description goes here</p>
+                    <div class="project-links">
+                        <a href="#" class="btn">View Project</a>
+                        <a href="#" class="btn">GitHub</a>
+                    </div>
+                </div>
+                <!-- Add more project cards here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lorenzo Franco. All rights reserved.</p>
+    </footer>
+</body> 
+</html> 
