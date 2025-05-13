@@ -16,7 +16,9 @@ app.use(expressLayouts);
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'src/public')));
+app.use(express.static('src/public'));
+app.use('/Assets', express.static('Assets'));
+app.use(express.static(path.join(__dirname)));
 
 // Basic error handling
 app.use((err, req, res, next) => {
@@ -31,10 +33,56 @@ app.get('/api/health', (req, res) => {
 
 // Routes
 try {
-    const indexRouter = require('./src/routes/index');
-    const apiRouter = require('./src/routes/api');
+    // Home page
+    app.get('/', (req, res) => {
+        res.render('home', {
+            title: 'Home',
+            page: 'home'
+        });
+    });
 
-    app.use('/', indexRouter);
+    // About page
+    app.get('/about', (req, res) => {
+        res.render('about', {
+            title: 'About',
+            page: 'about'
+        });
+    });
+
+    // Projects page
+    app.get('/projects', (req, res) => {
+        res.render('projects', {
+            title: 'Projects',
+            page: 'projects'
+        });
+    });
+
+    // Skills page
+    app.get('/skills', (req, res) => {
+        res.render('skills', {
+            title: 'Skills',
+            page: 'skills'
+        });
+    });
+
+    // Experience page
+    app.get('/experience', (req, res) => {
+        res.render('experience', {
+            title: 'Experience',
+            page: 'experience'
+        });
+    });
+
+    // Contact page
+    app.get('/contact', (req, res) => {
+        res.render('contact', {
+            title: 'Contact',
+            page: 'contact'
+        });
+    });
+
+    // API routes
+    const apiRouter = require('./src/routes/api');
     app.use('/api', apiRouter);
 } catch (error) {
     console.error('Error loading routes:', error);
