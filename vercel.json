@@ -8,16 +8,12 @@
     {
       "src": "src/public/**",
       "use": "@vercel/static"
-    },
-    {
-      "src": "Assets/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/Assets/(.*)",
-      "dest": "/Assets/$1"
+      "src": "/images/(.*)",
+      "dest": "/src/public/images/$1"
     },
     {
       "src": "/css/(.*)",
@@ -28,8 +24,12 @@
       "dest": "/src/public/js/$1"
     },
     {
-      "src": "/images/(.*)",
-      "dest": "/src/public/images/$1"
+      "src": "/Resume/(.*)",
+      "dest": "/src/public/Resume/$1"
+    },
+    {
+      "src": "/Music/(.*)",
+      "dest": "/src/public/Music/$1"
     },
     {
       "src": "/favicon.ico",
