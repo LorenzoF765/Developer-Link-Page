@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %> - Lorenzo Franco</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/chat.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="/js/chat.js" defer></script>
+</head>
+<body>
+    <audio>
+        <source src="/music/Kingdom Hearts 2 - Dearly Beloved [Extended w- DL Link].mp3" type="audio/mpeg">
+    </audio>
+    <div id="vanta-canvas"></div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.dots.min.js"></script>
+    <script type="text/javascript">
+        VANTA.DOTS({
+            el: "#vanta-canvas",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: true,
+            minHeight: 930.00,
+            minWidth: 200.00,
+            scale: 1.20,
+            scaleMobile: 1.20,
+            color: 0x8a00ff,
+            color2: 0x8500ff,
+            backgroundColor: 0x0,
+            size: 6.10,
+            spacing: 58.00
+        })
+
+        setTimeout(() => {
+            const main = document.querySelector('main')
+            main.style.opacity = 1;
+            main.style.filter = 'blur(0px)';
+        }, 1000)
+    </script>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/NewMe.png" alt="Lorenzo Franco">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>">Home</a></li>
+                <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>">About</a></li>
+                <li><a href="/projects" class="<%= page === 'projects' ? 'active' : '' %>">Projects</a></li>
+                <li><a href="/skills" class="<%= page === 'skills' ? 'active' : '' %>">Skills</a></li>
+                <li><a href="/experience" class="<%= page === 'experience' ? 'active' : '' %>">Experience</a></li>
+                <li><a href="/contact" class="<%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <%- body %>
+    </main>
+
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Lorenzo Franco. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
