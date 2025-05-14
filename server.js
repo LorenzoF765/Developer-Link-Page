@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
 const expressLayouts = require('express-ejs-layouts');
+const resumeController = require('./src/controllers/resumeController');
 
 // Load environment variables
 dotenv.config();
@@ -34,50 +35,64 @@ app.get('/api/health', (req, res) => {
 // Routes
 try {
     // Home page
-    app.get('/', (req, res) => {
+    app.get('/', async (req, res) => {
+        const data = await resumeController.getAllData();
         res.render('home', {
             title: 'Home',
-            page: 'home'
+            page: 'home',
+            resumeData: data
         });
     });
 
     // About page
-    app.get('/about', (req, res) => {
+    app.get('/about', async (req, res) => {
+        const data = await resumeController.getAllData();
         res.render('about', {
             title: 'About',
-            page: 'about'
+            page: 'about',
+            resumeData: data
         });
     });
 
     // Projects page
-    app.get('/projects', (req, res) => {
+    app.get('/projects', async (req, res) => {
+        const projects = await resumeController.getProjects();
         res.render('projects', {
             title: 'Projects',
-            page: 'projects'
+            page: 'projects',
+            projects: projects
         });
     });
 
     // Skills page
-    app.get('/skills', (req, res) => {
+    app.get('/skills', async (req, res) => {
+        const skills = await resumeController.getSkills();
         res.render('skills', {
             title: 'Skills',
-            page: 'skills'
+            page: 'skills',
+            skills: skills
         });
     });
 
     // Experience page
-    app.get('/experience', (req, res) => {
+    app.get('/experience', async (req, res) => {
+        const experience = await resumeController.getExperience();
+        const education = await resumeController.getEducation();
         res.render('experience', {
             title: 'Experience',
-            page: 'experience'
+            page: 'experience',
+            experience: experience,
+            education: education
         });
     });
 
     // Contact page
-    app.get('/contact', (req, res) => {
+    app.get('/contact', async (req, res) => {
+        const contact = await resumeController.getContact();
         res.render('contact', {
             title: 'Contact',
-            page: 'contact'
+            page: 'contact',
+            contact: contact
         });
     });
 

@@ -1,16 +1,117 @@
-<section id="experience">
-    <h2>Professional Experience</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h3>Job Title</h3>
-                <h4>Company Name</h4>
-                <p class="timeline-date">Month Year - Present</p>
-                <ul class="experience-list">
-                    <!-- Add your responsibilities and achievements -->
-                </ul>
-            </div>
+<section id="experience" class="fade-in">
+    <div class="container">
+        <h2 class="section-title slide-in-left">Professional Experience</h2>
+        
+        <!-- Experience Timeline -->
+        <div class="timeline">
+            <% if (experience && experience.length > 0) { %>
+                <% experience.forEach((job, index) => { %>
+                    <div class="timeline-item reveal" style="
+                        background: rgba(31, 41, 55, 0.85);
+                        backdrop-filter: blur(10px);
+                        border-radius: var(--radius-lg);
+                        padding: var(--spacing-lg);
+                        margin-bottom: var(--spacing-lg);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                    ">
+                        <div class="timeline-content">
+                            <h3 style="
+                                color: #ffffff;
+                                font-size: 1.5rem;
+                                margin-bottom: var(--spacing-sm);
+                            "><%= job.title %></h3>
+                            
+                            <% if (job.description && job.description.length > 0) { %>
+                                <ul class="experience-list" style="
+                                    list-style: none;
+                                    padding: 0;
+                                    margin: 0;
+                                ">
+                                    <% job.description.forEach(desc => { %>
+                                        <li style="
+                                            color: #ffffff;
+                                            margin-bottom: var(--spacing-sm);
+                                            padding-left: var(--spacing-md);
+                                            position: relative;
+                                        ">
+                                            • <%= desc %>
+                                        </li>
+                                    <% }); %>
+                                </ul>
+                            <% } %>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p style="color: #ffffff; text-align: center;">Experience data is being loaded...</p>
+            <% } %>
         </div>
-        <!-- Add more timeline items for each position -->
+
+        <!-- Education Section -->
+        <h2 class="section-title slide-in-right" style="margin-top: var(--spacing-xl);">Education</h2>
+        <div class="education-section">
+            <% if (education && education.length > 0) { %>
+                <% education.forEach((edu, index) => { %>
+                    <div class="education-item reveal" style="
+                        background: rgba(31, 41, 55, 0.85);
+                        backdrop-filter: blur(10px);
+                        border-radius: var(--radius-lg);
+                        padding: var(--spacing-lg);
+                        margin-bottom: var(--spacing-lg);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                    ">
+                        <h3 style="
+                            color: #ffffff;
+                            font-size: 1.5rem;
+                            margin-bottom: var(--spacing-sm);
+                        "><%= edu.title %></h3>
+                        
+                        <% if (edu.details && edu.details.length > 0) { %>
+                            <ul style="
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                            ">
+                                <% edu.details.forEach(detail => { %>
+                                    <li style="
+                                        color: #ffffff;
+                                        margin-bottom: var(--spacing-sm);
+                                        padding-left: var(--spacing-md);
+                                        position: relative;
+                                    ">
+                                        • <%= detail %>
+                                    </li>
+                                <% }); %>
+                            </ul>
+                        <% } %>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p style="color: #ffffff; text-align: center;">Education data is being loaded...</p>
+            <% } %>
+        </div>
     </div>
-</section> 
+</section>
+
+<!-- Add scroll reveal script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    function revealOnScroll() {
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (elementTop < windowHeight - 100) {
+                element.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial check
+});
+</script> 
