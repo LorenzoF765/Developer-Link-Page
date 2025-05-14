@@ -1,14 +1,144 @@
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <h3>Project Name</h3>
-            <p>Project description goes here</p>
-            <div class="project-links">
-                <a href="#" class="btn">View Project</a>
-                <a href="#" class="btn">GitHub</a>
+<section id="projects" class="fade-in">
+    <div class="container">
+        <h2 class="section-title slide-in-left">Featured Projects</h2>
+        
+        <div class="projects-grid" style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+            padding: var(--spacing-lg);
+        ">
+            <!-- D&D Initiative Tracker -->
+            <div class="project-card reveal" style="
+                background: rgba(31, 41, 55, 0.85);
+                backdrop-filter: blur(10px);
+                border-radius: var(--radius-lg);
+                padding: var(--spacing-lg);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-md);
+            ">
+                <div class="project-image" style="
+                    width: 100%;
+                    height: 200px;
+                    background-color: rgba(37, 99, 235, 0.1);
+                    border-radius: var(--radius-md);
+                    overflow: hidden;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                ">
+                    <img src="/images/dnd-tracker.png" alt="D&D Initiative Tracker" style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    ">
+                </div>
+
+                <div class="project-content">
+                    <h3 style="
+                        color: #ffffff;
+                        font-size: 1.5rem;
+                        margin-bottom: var(--spacing-sm);
+                    ">D&D Initiative Tracker</h3>
+                    
+                    <p style="
+                        color: #ffffff;
+                        margin-bottom: var(--spacing-md);
+                        line-height: 1.6;
+                    ">
+                        A sophisticated initiative tracking tool for D&D enthusiasts. Features complex backend logic for managing conditions, health, initiative count, and more. Built with Visual Studio Code for easy deployment and use during gameplay sessions.
+                    </p>
+
+                    <div class="project-meta" style="
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: var(--spacing-md);
+                    ">
+                        <span style="
+                            color: #9CA3AF;
+                            font-size: 0.9rem;
+                        ">Work Period: 1 Month</span>
+                    </div>
+
+                    <div class="project-links" style="
+                        display: flex;
+                        gap: var(--spacing-md);
+                    ">
+                        <a href="https://github.com/yourusername/dnd-initiative-tracker" target="_blank" style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: var(--spacing-sm);
+                            padding: var(--spacing-sm) var(--spacing-md);
+                            background: rgba(37, 99, 235, 0.1);
+                            color: #ffffff;
+                            text-decoration: none;
+                            border-radius: var(--radius-md);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            transition: all 0.3s ease;
+                        ">
+                            <img src="/images/Github-icon.png" alt="GitHub" style="width: 20px; height: 20px;">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Placeholder for Project 2 -->
+            <div class="project-card reveal" style="
+                background: rgba(31, 41, 55, 0.85);
+                backdrop-filter: blur(10px);
+                border-radius: var(--radius-lg);
+                padding: var(--spacing-lg);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 400px;
+            ">
+                <p style="color: #9CA3AF; text-align: center;">Coming Soon</p>
+            </div>
+
+            <!-- Placeholder for Project 3 -->
+            <div class="project-card reveal" style="
+                background: rgba(31, 41, 55, 0.85);
+                backdrop-filter: blur(10px);
+                border-radius: var(--radius-lg);
+                padding: var(--spacing-lg);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 400px;
+            ">
+                <p style="color: #9CA3AF; text-align: center;">Coming Soon</p>
             </div>
         </div>
-        <!-- Add more project cards here -->
     </div>
-</section> 
+</section>
+
+<!-- Add scroll reveal script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    function revealOnScroll() {
+        revealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (elementTop < windowHeight - 100) {
+                element.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial check
+});
+</script> 
