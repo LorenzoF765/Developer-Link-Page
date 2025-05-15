@@ -106,13 +106,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Card flip functionality
     const flipCards = document.querySelectorAll('.flip-card');
-    console.log('Found flip cards:', flipCards.length); // Debug log
+    console.log('Found flip cards:', flipCards.length);
+
+    function handleCardClick(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Card clicked!');
+        
+        // Remove transition temporarily if already flipped to prevent animation glitch
+        const inner = this.querySelector('.flip-card-inner');
+        if (this.classList.contains('flipped')) {
+            inner.style.transition = 'none';
+            requestAnimationFrame(() => {
+                inner.style.transition = '';
+                this.classList.remove('flipped');
+            });
+        } else {
+            this.classList.add('flipped');
+        }
+    }
 
     flipCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            console.log('Card clicked!'); // Debug log
-            this.classList.toggle('flipped');
-        });
+        card.addEventListener('click', handleCardClick);
     });
 });
 </script> 
