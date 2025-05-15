@@ -87,6 +87,7 @@
 <!-- Add scroll reveal script -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Scroll reveal functionality
     const revealElements = document.querySelectorAll('.reveal');
     
     function revealOnScroll() {
@@ -103,11 +104,14 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Initial check
 
-    // Add click event listeners for card flipping
+    // Card flip functionality
     const flipCards = document.querySelectorAll('.flip-card');
+    console.log('Found flip cards:', flipCards.length); // Debug log
+
     flipCards.forEach(card => {
-        card.addEventListener('click', () => {
-            card.classList.toggle('flipped');
+        card.addEventListener('click', function(e) {
+            console.log('Card clicked!'); // Debug log
+            this.classList.toggle('flipped');
         });
     });
 });

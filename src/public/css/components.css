@@ -50,11 +50,23 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+.flip-card-back {
+  /* Back face is shown initially */
+  transform: rotateY(0deg);
+}
+
 .flip-card-front {
+  /* Front face is hidden initially */
+  transform: rotateY(-180deg);
+}
+
+.flip-card.flipped .flip-card-back {
+  /* When flipped, hide back face */
   transform: rotateY(180deg);
 }
 
-.flip-card-back {
+.flip-card.flipped .flip-card-front {
+  /* When flipped, show front face */
   transform: rotateY(0deg);
 }
 
