@@ -12,6 +12,118 @@
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
+/* Flip Card Styles */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  cursor: pointer;
+  min-height: 400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: rgba(31, 41, 55, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.flip-card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card .project-image {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(37, 99, 235, 0.1);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.flip-card .project-image img,
+.flip-card .preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card .project-content {
+  color: #ffffff;
+}
+
+.flip-card .project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.flip-card .project-content p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.flip-card .project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.flip-card .project-meta span {
+  color: #9CA3AF;
+  font-size: 0.9rem;
+}
+
+.flip-card .project-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.flip-card .project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(37, 99, 235, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.flip-card .project-links a img {
+  width: 20px;
+  height: 20px;
+}
+
 /* Navigation */
 .nav {
   position: fixed;
