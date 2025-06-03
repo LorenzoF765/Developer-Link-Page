@@ -16,7 +16,7 @@ class AIChat {
         this.chatContainer.className = 'chat-container';
         this.chatContainer.innerHTML = `
             <div class="chat-button" tabindex="0" aria-label="Open chat">
-                <img src="./Assets/Images/chat-icon.png" alt="Chat" />
+                <img src="images/chat-icon.svg" alt="Chat" />
             </div>
             <div class="chat-box" aria-modal="true" role="dialog">
                 <div class="chat-header">
@@ -32,7 +32,7 @@ class AIChat {
                         aria-label="Type your message"
                     ></textarea>
                     <button class="send-btn" aria-label="Send message">
-                        <img src="./Assets/Images/send-icon.png" alt="Send" />
+                        <img src="/images/send-icon.svg" alt="Send" />
                     </button>
                 </div>
             </div>
