@@ -21,6 +21,7 @@
                     </div>
                     <div class="flip-card-back">
                         <div class="project-content">
+                            <div class="project-badge">Featured</div>
                             <img src="/images/dnd-tracker.png" alt="D&D Initiative Tracker detailed screenshot" class="project-image">
                             <h3>D&D Initiative Tracker</h3>
                             <p>
@@ -61,6 +62,7 @@
                     </div>
                     <div class="flip-card-back">
                         <div class="project-content">
+                            <div class="project-badge new">New</div>
                             <img src="/images/portfolio-preview.png" alt="Portfolio Website detailed screenshot" class="project-image">
                             <h3>Portfolio Website</h3>
                             <p>
@@ -99,6 +101,7 @@
                     </div>
                     <div class="flip-card-back">
                         <div class="project-content">
+                            <div class="project-badge soon">Soon</div>
                             <img src="/images/placeholder.png" alt="Coming Soon" class="project-image">
                             <h3>Coming Soon</h3>
                             <p>Stay tuned for more exciting projects!</p>
@@ -110,7 +113,6 @@
     </div>
 </section>
 
-<!-- Improved styles for projects (add to your CSS file or in a <style> block) -->
 <style>
 .improved-projects-grid {
     display: grid;
@@ -128,6 +130,7 @@
     transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
     outline: none;
     padding: 2.5rem 1.5rem 2rem 1.5rem;
+    position: relative;
 }
 .project-card:focus, .project-card:hover {
     transform: translateY(-12px) scale(1.045);
@@ -150,7 +153,7 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 2rem;
-    background: rgba(34, 40, 60, 0.98); /* Opaque card sides */
+    background: rgba(34, 40, 60, 0.98);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -158,23 +161,50 @@
     justify-content: center;
     padding: 2rem 1.5rem;
     box-shadow: 0 8px 40px 0 #a78bfa55, 0 2px 12px 0 #000a;
-    /* Remove text-shadow if you want crisper text */
 }
-
 .flip-card-back {
     transform: rotateY(180deg);
 }
 .card-content, .project-content {
     width: 100%;
     text-align: center;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    position: relative;
 }
+.project-badge {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 2;
+    margin-bottom: 0;
+    display: inline-block;
+    background: #ffb347;
+    color: #222;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.35em 1.1em;
+    border-radius: 1em;
+    letter-spacing: 0.07em;
+    box-shadow: 0 1px 8px #0004;
+    border: 1px solid #fff2;
+}
+.project-badge.new { background: #6ee7b7; color: #1e293b; }
+.project-badge.soon { background: #a5b4fc; color: #3730a3; }
 .preview-image, .project-image {
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
     width: 100%;
-    max-width: 260px;
-    border-radius: 0.7rem;
-    margin-bottom: 1rem;
+    max-width: 220px;
+    border-radius: 1rem;
     object-fit: cover;
-    box-shadow: 0 2px 16px 0 #a78bfa44, 0 2px 12px rgba(0,0,0,0.10);
+    box-shadow: 0 4px 32px #a78bfa55, 0 2px 16px #000a;
+    border: 2px solid #fff2;
 }
 .section-title {
     color: #a78bfa;
@@ -189,34 +219,12 @@ h3 {
     color: #fff;
     font-size: 1.7rem;
     font-weight: 800;
-    margin-bottom: 0.7em;
+    margin: 1.2rem 0 0.7rem 0;
     letter-spacing: 0.01em;
     text-shadow: 0 2px 16px #000c, 0 1px 0 #fff2;
 }
-
-.project-short-desc, .project-details li, .project-content p {
-    color: #f3f4fa;
-    text-shadow: 0 2px 12px #000b;
-    font-size: 1.08em;
-}
-.project-badge {
-    display: inline-block;
-    background: #ffb347;
-    color: #222;
-    font-weight: 700;
-    font-size: 0.95rem;
-    padding: 0.35em 1.1em;
-    border-radius: 1em;
-    margin-bottom: 0.9em;
-    letter-spacing: 0.07em;
-    box-shadow: 0 1px 8px #0004;
-    border: 1px solid #fff2;
-}
-.project-badge.new { background: #6ee7b7; color: #1e293b; }
-.project-badge.soon { background: #a5b4fc; color: #3730a3; }
-
 .project-tags {
-    margin: 0.7em 0 1.2em 0;
+    margin-bottom: 1.1em;
 }
 .tag {
     display: inline-block;
@@ -230,6 +238,13 @@ h3 {
     font-weight: 700;
     letter-spacing: 0.01em;
     box-shadow: 0 1px 8px #0003;
+}
+.project-short-desc, .project-details li, .project-content p {
+    color: #f3f4fa;
+    text-shadow: 0 2px 12px #000b;
+    font-size: 1.08em;
+    margin-bottom: 2.2em;
+    margin-top: 0.5em;
 }
 .project-details {
     text-align: left;
@@ -266,17 +281,9 @@ h3 {
     height: 1.3em;
     filter: drop-shadow(0 0 4px #fff8);
 }
-.preview-image, .project-image {
-    width: 100%;
-    max-width: 270px;
-    border-radius: 1rem;
-    margin-bottom: 1.2rem;
-    object-fit: cover;
-    box-shadow: 0 4px 32px #a78bfa55, 0 2px 16px #000a;
-    border: 2px solid #fff2;
-}
 .flip-btn {
-    margin-top: 1.2em;
+    margin-top: auto;
+    margin-bottom: 0.5em;
     background: rgba(36, 40, 50, 0.92);
     color: #fff;
     border: 1.5px solid #a5b4fc88;
@@ -308,7 +315,6 @@ h3 {
 }
 </style>
 
-<!-- Improved JS for accessibility and better UX -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Scroll reveal
