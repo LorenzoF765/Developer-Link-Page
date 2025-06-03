@@ -1,81 +1,107 @@
 <section id="projects" class="fade-in">
     <div class="container">
         <h2 class="section-title slide-in-left">Featured Projects</h2>
-        
-        <div class="projects-grid" style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--spacing-xl);
-            padding: var(--spacing-lg);
-        ">
-            <!-- D&D Initiative Tracker -->
-            <div class="project-card flip-card reveal">
+        <div class="projects-grid improved-projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card flip-card reveal" tabindex="0" aria-label="D&D Initiative Tracker project card">
                 <div class="flip-card-inner">
-                    <!-- Front of card (shown first) -->
                     <div class="flip-card-front">
                         <div class="card-content">
+                            <div class="project-badge">Featured</div>
+                            <img src="/images/dnd-tracker.png" alt="Screenshot of D&D Initiative Tracker" class="preview-image">
                             <h3>D&D Initiative Tracker</h3>
-                            <img src="/images/dnd-tracker.png" alt="D&D Initiative Tracker" class="preview-image">
-                            <p>Click to learn more about this project</p>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express</span>
+                                <span class="tag">EJS</span>
+                            </div>
+                            <p class="project-short-desc">A sophisticated initiative tracking tool for D&D enthusiasts.</p>
+                            <button class="flip-btn" aria-label="Show more about D&D Initiative Tracker">Learn More</button>
                         </div>
                     </div>
-                    
-                    <!-- Back of card (shown after flip) -->
                     <div class="flip-card-back">
                         <div class="project-content">
-                            <div class="project-image">
-                                <img src="/images/dnd-tracker.png" alt="D&D Initiative Tracker">
-                            </div>
-
+                            <img src="/images/dnd-tracker.png" alt="D&D Initiative Tracker detailed screenshot" class="project-image">
                             <h3>D&D Initiative Tracker</h3>
-                            <p>A sophisticated initiative tracking tool for D&D enthusiasts. Features complex backend logic for managing conditions, health, initiative count, and more. Built with Visual Studio Code for easy deployment and use during gameplay sessions.</p>
-
-                            <div class="project-meta">
-                                <span>Work Period: 1 Month</span>
-                            </div>
-
+                            <p>
+                                A sophisticated initiative tracking tool for D&D enthusiasts. Features complex backend logic for managing conditions, health, initiative count, and more. Built with Visual Studio Code for easy deployment and use during gameplay sessions.
+                            </p>
+                            <ul class="project-details">
+                                <li><strong>Work Period:</strong> 1 Month</li>
+                                <li><strong>Tech Stack:</strong> Node.js, Express, EJS, CSS</li>
+                            </ul>
                             <div class="project-links">
-                                <a href="https://github.com/yourusername/dnd-initiative-tracker" target="_blank">
-                                    <img src="/images/Github-icon.png" alt="GitHub">
+                                <a href="https://github.com/yourusername/dnd-initiative-tracker" target="_blank" rel="noopener">
+                                    <img src="/images/Github-icon.png" alt="GitHub" class="icon">
                                     View on GitHub
                                 </a>
                             </div>
+                            <button class="flip-btn" aria-label="Back to project front">Back</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Placeholder for Project 2 -->
-            <div class="project-card flip-card reveal">
+            <!-- Project 2 Example -->
+            <div class="project-card flip-card reveal" tabindex="0" aria-label="Portfolio Website project card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-content">
-                            <h3>Coming Soon</h3>
-                            <p>New project in development</p>
+                            <div class="project-badge new">New</div>
+                            <img src="/images/portfolio-preview.png" alt="Screenshot of Portfolio Website" class="preview-image">
+                            <h3>Portfolio Website</h3>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <p class="project-short-desc">A modern, responsive portfolio to showcase my work and skills.</p>
+                            <button class="flip-btn" aria-label="Show more about Portfolio Website">Learn More</button>
                         </div>
                     </div>
                     <div class="flip-card-back">
                         <div class="project-content">
-                            <h3>Coming Soon</h3>
-                            <p>New project in development</p>
+                            <img src="/images/portfolio-preview.png" alt="Portfolio Website detailed screenshot" class="project-image">
+                            <h3>Portfolio Website</h3>
+                            <p>
+                                My personal portfolio website, built from scratch to highlight my projects, skills, and experience. Features smooth animations, responsive design, and easy navigation.
+                            </p>
+                            <ul class="project-details">
+                                <li><strong>Work Period:</strong> 2 Weeks</li>
+                                <li><strong>Tech Stack:</strong> HTML, CSS, JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/portfolio" target="_blank" rel="noopener">
+                                    <img src="/images/Github-icon.png" alt="GitHub" class="icon">
+                                    View on GitHub
+                                </a>
+                                <a href="https://yourportfolio.com" target="_blank" rel="noopener">
+                                    <img src="/images/link-icon.png" alt="Live Site" class="icon">
+                                    Live Demo
+                                </a>
+                            </div>
+                            <button class="flip-btn" aria-label="Back to project front">Back</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Placeholder for Project 3 -->
-            <div class="project-card flip-card reveal">
+            <div class="project-card flip-card reveal" tabindex="0" aria-label="Coming Soon project card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <div class="card-content">
+                            <div class="project-badge soon">Soon</div>
+                            <img src="/images/placeholder.png" alt="Coming Soon" class="preview-image">
                             <h3>Coming Soon</h3>
-                            <p>New project in development</p>
+                            <p class="project-short-desc">New project in development</p>
                         </div>
                     </div>
                     <div class="flip-card-back">
                         <div class="project-content">
+                            <img src="/images/placeholder.png" alt="Coming Soon" class="project-image">
                             <h3>Coming Soon</h3>
-                            <p>New project in development</p>
+                            <p>Stay tuned for more exciting projects!</p>
                         </div>
                     </div>
                 </div>
@@ -84,52 +110,190 @@
     </div>
 </section>
 
-<!-- Add scroll reveal script -->
+<!-- Improved styles for projects (add to your CSS file or in a <style> block) -->
+<style>
+.improved-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+.project-card {
+    background: var(--card-bg, #181c24);
+    border-radius: 1.2rem;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+.project-card:focus, .project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(.4,2,.6,1);
+    transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background: var(--card-bg, #181c24);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 2rem 1.5rem;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+.card-content, .project-content {
+    width: 100%;
+    text-align: center;
+}
+.preview-image, .project-image {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.project-badge {
+    display: inline-block;
+    background: #ffb347;
+    color: #222;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.3em 0.9em;
+    border-radius: 1em;
+    margin-bottom: 0.7em;
+    letter-spacing: 0.05em;
+}
+.project-badge.new { background: #6ee7b7; color: #1e293b; }
+.project-badge.soon { background: #a5b4fc; color: #3730a3; }
+.project-tags {
+    margin: 0.5em 0 1em 0;
+}
+.tag {
+    display: inline-block;
+    background: #23272f;
+    color: #b6c2e0;
+    font-size: 0.8em;
+    padding: 0.2em 0.7em;
+    border-radius: 0.7em;
+    margin: 0 0.2em;
+}
+.project-short-desc {
+    color: #b6c2e0;
+    margin-bottom: 1.2em;
+}
+.project-details {
+    text-align: left;
+    margin: 1em auto 1.5em auto;
+    padding: 0;
+    list-style: none;
+    max-width: 320px;
+}
+.project-details li {
+    margin-bottom: 0.5em;
+    color: #b6c2e0;
+}
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2em;
+    margin-bottom: 1em;
+}
+.project-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    color: #60a5fa;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.project-links a:hover {
+    color: #2563eb;
+}
+.icon {
+    width: 1.2em;
+    height: 1.2em;
+}
+.flip-btn {
+    margin-top: 1em;
+    background: #23272f;
+    color: #b6c2e0;
+    border: none;
+    border-radius: 0.7em;
+    padding: 0.5em 1.2em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.flip-btn:hover, .flip-btn:focus {
+    background: #374151;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .improved-projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 1rem 0;
+    }
+    .flip-card-front, .flip-card-back {
+        padding: 1.2rem 0.5rem;
+    }
+}
+</style>
+
+<!-- Improved JS for accessibility and better UX -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Scroll reveal functionality
+    // Scroll reveal
     const revealElements = document.querySelectorAll('.reveal');
-    
     function revealOnScroll() {
         revealElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-            
             if (elementTop < windowHeight - 100) {
                 element.classList.add('active');
             }
         });
     }
-    
     window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Initial check
+    revealOnScroll();
 
-    // Card flip functionality
+    // Card flip functionality (click, button, keyboard)
     const flipCards = document.querySelectorAll('.flip-card');
-    console.log('Found flip cards:', flipCards.length);
-
-    function flipCard(card) {
-        console.log('Flipping card');
-        card.classList.toggle('flipped');
-    }
-
     flipCards.forEach(card => {
-        // Add cursor pointer style
-        card.style.cursor = 'pointer';
-        
-        // Add click event
-        card.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            flipCard(card);
+        // Flip on button click
+        card.querySelectorAll('.flip-btn').forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                e.stopPropagation();
+                card.classList.toggle('flipped');
+            });
         });
-
-        // Add touch event for mobile
-        card.addEventListener('touchend', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            flipCard(card);
-        }, { passive: false });
+        // Flip on card click (except when clicking a link or button)
+        card.addEventListener('click', e => {
+            if (e.target.tagName !== 'A' && !e.target.classList.contains('flip-btn')) {
+                card.classList.toggle('flipped');
+            }
+        });
+        // Keyboard accessibility: flip on Enter/Space
+        card.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.classList.toggle('flipped');
+            }
+        });
     });
 });
-</script> 
+</script>
