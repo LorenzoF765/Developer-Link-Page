@@ -119,15 +119,18 @@
     padding: 2rem 0;
 }
 .project-card {
-    background: var(--card-bg, #181c24);
-    border-radius: 1.2rem;
-    box-shadow: 0 6px 32px rgba(0,0,0,0.18);
-    transition: transform 0.2s, box-shadow 0.2s;
+    background: rgba(24, 28, 36, 0.55);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 40px 0 rgba(80,0,180,0.18), 0 1.5px 8px 0 rgba(0,0,0,0.12);
+    backdrop-filter: blur(8px) saturate(160%);
+    border: 1.5px solid rgba(120, 80, 255, 0.18);
+    transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
     outline: none;
 }
 .project-card:focus, .project-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 16px 60px 0 rgba(120,0,255,0.22), 0 2px 12px 0 rgba(0,0,0,0.18);
+    border: 1.5px solid #a78bfa;
 }
 .flip-card-inner {
     position: relative;
@@ -143,11 +146,13 @@
     position: absolute;
     width: 100%; height: 100%;
     backface-visibility: hidden;
-    border-radius: 1.2rem;
+    border-radius: 1.5rem;
     overflow: hidden;
-    background: var(--card-bg, #181c24);
+    background: transparent;
+    color: #f3f4f6;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     padding: 2rem 1.5rem;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
 }
 .flip-card-back {
     transform: rotateY(180deg);
@@ -162,7 +167,27 @@
     border-radius: 0.7rem;
     margin-bottom: 1rem;
     object-fit: cover;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    box-shadow: 0 2px 16px 0 #a78bfa44, 0 2px 12px rgba(0,0,0,0.10);
+}
+.section-title {
+    color: #60a5fa;
+    font-size: 2.7rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 2px 24px #000, 0 1px 0 #fff1;
+}
+h3 {
+    color: #a5b4fc;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+    letter-spacing: 0.01em;
+}
+.project-short-desc, .project-details li, .project-content p {
+    color: #e0e7ef;
+    text-shadow: 0 1px 8px #000a;
 }
 .project-badge {
     display: inline-block;
@@ -174,6 +199,8 @@
     border-radius: 1em;
     margin-bottom: 0.7em;
     letter-spacing: 0.05em;
+    box-shadow: 0 1px 8px #0004;
+    border: 1px solid #fff2;
 }
 .project-badge.new { background: #6ee7b7; color: #1e293b; }
 .project-badge.soon { background: #a5b4fc; color: #3730a3; }
@@ -182,16 +209,15 @@
 }
 .tag {
     display: inline-block;
-    background: #23272f;
-    color: #b6c2e0;
+    background: rgba(36, 40, 50, 0.7);
+    color: #c7d2fe;
     font-size: 0.8em;
     padding: 0.2em 0.7em;
     border-radius: 0.7em;
     margin: 0 0.2em;
-}
-.project-short-desc {
-    color: #b6c2e0;
-    margin-bottom: 1.2em;
+    border: 1px solid #a5b4fc44;
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 .project-details {
     text-align: left;
@@ -214,13 +240,14 @@
     display: flex;
     align-items: center;
     gap: 0.4em;
-    color: #60a5fa;
+    color: #7dd3fc;
     font-weight: 600;
     text-decoration: none;
     transition: color 0.2s;
+    text-shadow: 0 1px 8px #000a;
 }
 .project-links a:hover {
-    color: #2563eb;
+    color: #f472b6;
 }
 .icon {
     width: 1.2em;
@@ -228,18 +255,21 @@
 }
 .flip-btn {
     margin-top: 1em;
-    background: #23272f;
-    color: #b6c2e0;
-    border: none;
+    background: rgba(36, 40, 50, 0.85);
+    color: #f3f4f6;
+    border: 1px solid #a5b4fc44;
     border-radius: 0.7em;
     padding: 0.5em 1.2em;
     font-size: 1em;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    font-weight: 700;
+    box-shadow: 0 1px 8px #0004;
 }
 .flip-btn:hover, .flip-btn:focus {
-    background: #374151;
-    color: #fff;
+    background: #a78bfa;
+    color: #23272f;
+    border: 1px solid #fff4;
 }
 @media (max-width: 600px) {
     .improved-projects-grid {
@@ -249,6 +279,9 @@
     }
     .flip-card-front, .flip-card-back {
         padding: 1.2rem 0.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
     }
 }
 </style>
