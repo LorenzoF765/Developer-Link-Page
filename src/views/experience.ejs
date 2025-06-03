@@ -4,114 +4,114 @@
         
         <!-- Experience Timeline -->
         <div class="timeline">
-            <% if (experience && experience.length > 0) { %>
-                <% experience.forEach((job, index) => { %>
-                    <div class="timeline-item reveal" style="
-                        background: rgba(31, 41, 55, 0.85);
-                        backdrop-filter: blur(10px);
-                        border-radius: var(--radius-lg);
-                        padding: var(--spacing-lg);
-                        margin-bottom: var(--spacing-lg);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-                    ">
-                        <div class="timeline-content">
-                            <h3 style="
-                                color: #ffffff;
-                                font-size: 1.5rem;
-                                margin-bottom: var(--spacing-sm);
-                            "><%= job.title %></h3>
-                            
-                            <% if (job.description && job.description.length > 0) { %>
-                                <ul class="experience-list" style="
-                                    list-style: none;
-                                    padding: 0;
-                                    margin: 0;
-                                ">
-                                    <% job.description.forEach(desc => { %>
-                                        <li style="
-                                            color: #ffffff;
-                                            margin-bottom: var(--spacing-sm);
-                                            padding-left: var(--spacing-md);
-                                            position: relative;
-                                        ">
-                                            • <%= desc %>
-                                        </li>
-                                    <% }); %>
-                                </ul>
-                            <% } %>
-                        </div>
-                    </div>
-                <% }); %>
-            <% } else { %>
-                <p style="color: #ffffff; text-align: center;">Experience data is being loaded...</p>
-            <% } %>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h3>Developer, CAWS (Community Animal Welfare Society), Salt Lake City</h3>
+                    <div class="timeline-date">January 2025 — March 2025</div>
+                    <ul class="experience-list">
+                        <li>Neumont Collaborative Project | Redeveloped, tested, and redeployed a large-scale adoption database through Sheltermanager.com</li>
+                        <li>Updated UI/UX Elements on the caws.org website, as well as improved user/admin authentication</li>
+                        <li>Provided CAWS with a seamless document-to-signature connection through Xodo Sign API</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h3>Developer, The TBCK Foundation, Salt Lake City</h3>
+                    <div class="timeline-date">January 2025 — March 2025</div>
+                    <ul class="experience-list">
+                        <li>Neumont Collaborative Project | Completely built, tested, and deployed tbcktimes.org</li>
+                        <li>Updated UI/UX Elements on the tbckfoundation.org website, as well as implemented user/admin authentication</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h3>Leader Developer, Neumont Senior Capstone Project, Salt Lake City</h3>
+                    <div class="timeline-date">March 2024 — May 2024</div>
+                    <ul class="experience-list">
+                        <li>Trained 2 AI Models to work as 1 unique note-keeping assistant, developed a React-based webspace to hold them and then deployed the project through AWS</li>
+                        <li>Trained through existing frameworks such as HuggingFace and OpenAI, combined with my unique code through Visual Studio</li>
+                        <li>Provided users anywhere from a platonic companion and notetaker to a personal assistant</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!-- Education Section -->
-        <h2 class="section-title slide-in-right" style="margin-top: var(--spacing-xl);">Education</h2>
+        <h2 class="section-title slide-in-right" style="margin-top: 2.5rem;">Education</h2>
         <div class="education-section">
-            <% if (education && education.length > 0) { %>
-                <% education.forEach((edu, index) => { %>
-                    <div class="education-item reveal" style="
-                        background: rgba(31, 41, 55, 0.85);
-                        backdrop-filter: blur(10px);
-                        border-radius: var(--radius-lg);
-                        padding: var(--spacing-lg);
-                        margin-bottom: var(--spacing-lg);
-                        border: 1px solid rgba(255, 255, 255, 0.1);
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-                    ">
-                        <h3 style="
-                            color: #ffffff;
-                            font-size: 1.5rem;
-                            margin-bottom: var(--spacing-sm);
-                        "><%= edu.title %></h3>
-                        
-                        <% if (edu.details && edu.details.length > 0) { %>
-                            <ul style="
-                                list-style: none;
-                                padding: 0;
-                                margin: 0;
-                            ">
-                                <% edu.details.forEach(detail => { %>
-                                    <li style="
-                                        color: #ffffff;
-                                        margin-bottom: var(--spacing-sm);
-                                        padding-left: var(--spacing-md);
-                                        position: relative;
-                                    ">
-                                        • <%= detail %>
-                                    </li>
-                                <% }); %>
-                            </ul>
-                        <% } %>
-                    </div>
-                <% }); %>
-            <% } else { %>
-                <p style="color: #ffffff; text-align: center;">Education data is being loaded...</p>
-            <% } %>
+            <div class="education-item reveal">
+                <h3>BACHELOR OF SCIENCE IN SOFTWARE & GAME DEVELOPMENT, Neumont College of Computer Science, Salt Lake City</h3>
+                <div class="timeline-date">September 2021 — Present</div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Add scroll reveal script -->
+<style>
+.timeline, .education-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.timeline-item, .education-item {
+    background: rgba(31, 41, 55, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 1.2rem;
+    padding: 2rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 16px rgba(80,0,180,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+    margin-bottom: 0;
+}
+.timeline-content h3, .education-item h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.01em;
+}
+.timeline-date {
+    color: #a5b4fc;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.experience-list {
+    list-style: disc inside;
+    padding-left: 1.2em;
+    color: #e0e7ef;
+    font-size: 1.05rem;
+    margin: 0;
+}
+.experience-list li {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+@media (max-width: 700px) {
+    .timeline-item, .education-item {
+        padding: 1.2rem 0.7rem;
+    }
+    .timeline, .education-section {
+        gap: 1.2rem;
+    }
+}
+</style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const revealElements = document.querySelectorAll('.reveal');
-    
     function revealOnScroll() {
         revealElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-            
             if (elementTop < windowHeight - 100) {
                 element.classList.add('active');
             }
         });
     }
-    
     window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Initial check
+    revealOnScroll();
 });
-</script> 
+</script>

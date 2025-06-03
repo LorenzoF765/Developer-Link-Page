@@ -1,24 +1,147 @@
-<section id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-        <div class="about-text">
-            <p>Welcome to my portfolio! I'm a passionate software developer with a focus on creating elegant solutions to complex problems.</p>
-            <p>My journey in software development began with a curiosity for technology and a desire to create meaningful applications that make a difference.</p>
-            <!-- Add more paragraphs about yourself -->
+<section id="about" class="fade-in">
+    <div class="about-container">
+        <div class="about-header">
+            <img src="/images/profile.jpg" alt="Lorenzo Franco" class="about-avatar">
+            <h2 class="about-title">About Me</h2>
         </div>
-        <div class="about-stats">
-            <div class="stat-item">
-                <h3>Background</h3>
-                <p>Your educational background and key experiences</p>
+        <div class="about-main">
+            <div class="about-text">
+                <p>
+                    Hi, I’m <span class="about-highlight">Lorenzo Franco</span>, a passionate software and game developer with a focus on creating meaningful, intuitive, and creatively inspired digital experiences. I specialize in <span class="about-highlight">full-stack development</span>, blending strong technical proficiency with thoughtful design.
+                </p>
+                <p>
+                    With a background in <span class="about-highlight">software engineering</span>, <span class="about-highlight">game design</span>, and <span class="about-highlight">AI integration</span>, I enjoy building applications that not only function well — but feel personal, polished, and purposeful. Whether I’m designing player interactions in Unity, building robust backend systems in Java or Python, or experimenting with AI-driven tools, my goal is always to push the boundary between logic and artistry.
+                </p>
+                <p>
+                    I believe technology should serve as a bridge between people and potential. That’s why I approach each project with curiosity, empathy, and a relentless drive to learn.
+                </p>
+                <p>
+                    When I’m not coding, you can find me writing, playing D&D with my group <span class="about-highlight">"The Menagerie of Fools"</span>, or exploring ways to make technology more human.
+                </p>
+                <p class="about-cta">
+                    <strong>Let’s build something that matters.</strong>
+                </p>
             </div>
-            <div class="stat-item">
-                <h3>Interests</h3>
-                <p>Your technical interests and areas of expertise</p>
-            </div>
-            <div class="stat-item">
-                <h3>Goals</h3>
-                <p>Your professional goals and aspirations</p>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <h3>Background</h3>
+                    <p>Software engineering, game design, and AI integration.</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Interests</h3>
+                    <p>Full-stack development, creative coding, player experience, and AI-driven tools.</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Goals</h3>
+                    <p>To bridge logic and artistry, and make technology more human and meaningful.</p>
+                </div>
             </div>
         </div>
     </div>
-</section> 
+</section>
+
+<style>
+.about-container {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    background: rgba(34, 40, 60, 0.93);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px #a78bfa33, 0 1px 8px #0007;
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+}
+.about-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #a78bfa;
+    box-shadow: 0 2px 12px #a78bfa44;
+    background: #23272f;
+}
+.about-title {
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: #a78bfa;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 16px #000a;
+    margin: 0;
+}
+.about-main {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about-text {
+    flex: 2 1 340px;
+    font-size: 1.13rem;
+    color: #f3f4fa;
+    line-height: 1.7;
+    text-shadow: 0 1px 8px #0007;
+}
+.about-highlight {
+    color: #a5b4fc;
+    font-weight: 700;
+}
+.about-cta {
+    margin-top: 1.5rem;
+    font-size: 1.15rem;
+    color: #fff;
+    text-shadow: 0 2px 12px #a78bfa44;
+    letter-spacing: 0.01em;
+}
+.about-stats {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background: rgba(55, 65, 81, 0.75);
+    border-radius: 1rem;
+    padding: 1.2rem 1rem;
+    box-shadow: 0 2px 12px #a78bfa22;
+    min-width: 210px;
+    max-width: 270px;
+    align-self: flex-start;
+}
+.stat-item h3 {
+    color: #a5b4fc;
+    font-size: 1.08rem;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+.stat-item p {
+    color: #e0e7ef;
+    font-size: 0.98rem;
+    margin: 0;
+    line-height: 1.5;
+}
+@media (max-width: 900px) {
+    .about-main {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .about-stats {
+        max-width: 100%;
+        min-width: unset;
+        align-self: stretch;
+    }
+    .about-container {
+        padding: 1.2rem 0.5rem;
+    }
+    .about-header {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+}
+</style>

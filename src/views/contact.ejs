@@ -1,14 +1,14 @@
 <section id="contact">
-    <h2>Get in Touch</h2>
+    <h2 class="contact-title">Get in Touch</h2>
     <div class="contact-content">
-        <p>Interested in working together? Let's connect!</p>
+        <p class="contact-intro">Interested in working together? Let's connect!</p>
         <div class="contact-grid">
             <div class="contact-info">
                 <h3>Contact Information</h3>
                 <div class="contact-details">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        <a href="mailto:lorenzof764@gmail.com">lorenzof764@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -16,18 +16,152 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Your Location</span>
+                        <span>Salt Lake City, Utah</span>
                     </div>
                 </div>
             </div>
             <div class="social-links">
-                <a href="https://www.x.com/xeroxspectre" target="_blank"><img src="/images/X-icon.png" alt="X"></a>
-                <a href="https://www.Instagram.com/xeroxspectre" target="_blank"><img src="/images/Instagram-icon.png" alt="Instagram"></a>
-                <a href="https://www.tiktok.com/@xeroxspectre" target="_blank"><img src="/images/Tiktok-icon.png" alt="TikTok"></a>
-                <a href="https://discordapp.com/users/465947778502230057" target="_blank"><img src="/images/Discord-icon-removebg-preview.png" alt="Discord"></a>
-                <a href="https://github.com/LorenzoF765" target="_blank"><img src="/images/Github-icon.png" alt="Github"></a>
-                <a href="https://www.linkedin.com/in/lorenzo-p-franco/" target="_blank"><img src="/images/Linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://www.x.com/xeroxspectre" target="_blank" title="X / Twitter"><img src="/images/X-icon.png" alt="X"></a>
+                <a href="https://www.Instagram.com/xeroxspectre" target="_blank" title="Instagram"><img src="/images/Instagram-icon.png" alt="Instagram"></a>
+                <a href="https://www.tiktok.com/@xeroxspectre" target="_blank" title="TikTok"><img src="/images/Tiktok-icon.png" alt="TikTok"></a>
+                <a href="https://discordapp.com/users/465947778502230057" target="_blank" title="Discord"><img src="/images/Discord-icon-removebg-preview.png" alt="Discord"></a>
+                <a href="https://github.com/LorenzoF765" target="_blank" title="GitHub"><img src="/images/Github-icon.png" alt="Github"></a>
+                <a href="https://www.linkedin.com/in/lorenzo-p-franco/" target="_blank" title="LinkedIn"><img src="/images/Linkedin-icon.png" alt="LinkedIn"></a>
             </div>
         </div>
     </div>
-</section> 
+</section>
+
+<style>
+#contact {
+    max-width: 700px;
+    margin: 3rem auto 2rem auto;
+    background: rgba(34, 40, 60, 0.96);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px #a78bfa33, 0 1px 8px #0007;
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-title {
+    color: #a78bfa;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 16px #000a;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+.contact-intro {
+    color: #e0e7ef;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 1px 8px #0007;
+}
+.contact-grid {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.contact-info {
+    background: rgba(55, 65, 81, 0.80);
+    border-radius: 1rem;
+    padding: 1.5rem 1.2rem;
+    box-shadow: 0 2px 12px #a78bfa22;
+    min-width: 240px;
+    max-width: 320px;
+    flex: 1 1 220px;
+}
+.contact-info h3 {
+    color: #a5b4fc;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    color: #e0e7ef;
+    font-size: 1.05em;
+    word-break: break-all;
+}
+.contact-item i {
+    color: #a78bfa;
+    font-size: 1.2em;
+    min-width: 1.2em;
+}
+.contact-item a {
+    color: #7dd3fc;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.18s;
+}
+.contact-item a:hover {
+    color: #f472b6;
+    text-decoration: underline;
+}
+.social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.1em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2rem;
+    background: rgba(55, 65, 81, 0.80);
+    border-radius: 1rem;
+    padding: 1.2rem 1.2rem;
+    box-shadow: 0 2px 12px #a78bfa22;
+    min-width: 180px;
+}
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(167, 139, 250, 0.09);
+    border-radius: 50%;
+    width: 2.7em;
+    height: 2.7em;
+    transition: background 0.18s, box-shadow 0.18s;
+    box-shadow: 0 1px 8px #0002;
+}
+.social-links a:hover {
+    background: #a78bfa;
+    box-shadow: 0 2px 16px #a78bfa55;
+}
+.social-links img {
+    width: 1.5em;
+    height: 1.5em;
+    object-fit: contain;
+    filter: drop-shadow(0 0 4px #fff8);
+    transition: filter 0.18s;
+}
+@media (max-width: 700px) {
+    #contact {
+        padding: 1.2rem 0.5rem;
+    }
+    .contact-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+    .contact-info, .social-links {
+        max-width: 100%;
+        min-width: unset;
+        align-self: stretch;
+    }
+}
+</style>

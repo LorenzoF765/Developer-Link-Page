@@ -1,159 +1,131 @@
 <section id="skills" class="fade-in">
     <div class="container">
         <h2 class="section-title slide-in-left">Skills & Expertise</h2>
-        
-        <div class="skills-grid" style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
-            padding: var(--spacing-lg);
-        ">
+        <div class="skills-grid">
             <!-- Technical Skills -->
-            <div class="skill-category reveal" style="
-                background: rgba(31, 41, 55, 0.85);
-                backdrop-filter: blur(10px);
-                border-radius: var(--radius-lg);
-                padding: var(--spacing-lg);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            ">
-                <h3 style="
-                    color: #ffffff;
-                    font-size: 1.5rem;
-                    margin-bottom: var(--spacing-md);
-                    text-align: center;
-                ">Technical Skills</h3>
-                
-                <% if (skills && skills.technical && skills.technical.length > 0) { %>
-                    <ul class="skills-list" style="
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: var(--spacing-sm);
-                    ">
-                        <% skills.technical.forEach(skill => { %>
-                            <li class="skill-item" style="
-                                background: rgba(37, 99, 235, 0.1);
-                                color: #ffffff;
-                                padding: var(--spacing-sm) var(--spacing-md);
-                                border-radius: var(--radius-md);
-                                font-size: 0.9rem;
-                                backdrop-filter: blur(5px);
-                                border: 1px solid rgba(255, 255, 255, 0.1);
-                            ">
-                                <%= skill %>
-                            </li>
-                        <% }); %>
-                    </ul>
-                <% } %>
+            <div class="skill-category reveal">
+                <h3>Technical Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-btn">Python</span>
+                    <span class="skill-btn">MongoDB</span>
+                    <span class="skill-btn">Node.js</span>
+                    <span class="skill-btn">React</span>
+                    <span class="skill-btn">Git</span>
+                    <span class="skill-btn">HTML &amp; CSS</span>
+                    <span class="skill-btn">SQL</span>
+                    <span class="skill-btn">C++</span>
+                    <span class="skill-btn">JavaScript</span>
+                    <span class="skill-btn">Design of User Interfaces</span>
+                    <span class="skill-btn">APIs</span>
+                    <span class="skill-btn">Artificial Intelligence</span>
+                    <span class="skill-btn">Amazon Web Services</span>
+                    <span class="skill-btn">Microsoft Visual Studio</span>
+                </div>
             </div>
-
-            <!-- Tools -->
-            <div class="skill-category reveal" style="
-                background: rgba(31, 41, 55, 0.85);
-                backdrop-filter: blur(10px);
-                border-radius: var(--radius-lg);
-                padding: var(--spacing-lg);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            ">
-                <h3 style="
-                    color: #ffffff;
-                    font-size: 1.5rem;
-                    margin-bottom: var(--spacing-md);
-                    text-align: center;
-                ">Tools & Technologies</h3>
-                
-                <% if (skills && skills.tools && skills.tools.length > 0) { %>
-                    <ul class="skills-list" style="
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: var(--spacing-sm);
-                    ">
-                        <% skills.tools.forEach(tool => { %>
-                            <li class="skill-item" style="
-                                background: rgba(37, 99, 235, 0.1);
-                                color: #ffffff;
-                                padding: var(--spacing-sm) var(--spacing-md);
-                                border-radius: var(--radius-md);
-                                font-size: 0.9rem;
-                                backdrop-filter: blur(5px);
-                                border: 1px solid rgba(255, 255, 255, 0.1);
-                            ">
-                                <%= tool %>
-                            </li>
-                        <% }); %>
-                    </ul>
-                <% } %>
+            <!-- Tools & Technologies -->
+            <div class="skill-category reveal">
+                <h3>Tools &amp; Technologies</h3>
+                <div class="skills-list">
+                    <span class="skill-btn">Visual Studio</span>
+                    <span class="skill-btn">AWS</span>
+                    <span class="skill-btn">MongoDB Atlas</span>
+                    <span class="skill-btn">Postman</span>
+                    <span class="skill-btn">Unreal Engine</span>
+                    <span class="skill-btn">Django</span>
+                    <span class="skill-btn">Express</span>
+                </div>
             </div>
-
             <!-- Soft Skills -->
-            <div class="skill-category reveal" style="
-                background: rgba(31, 41, 55, 0.85);
-                backdrop-filter: blur(10px);
-                border-radius: var(--radius-lg);
-                padding: var(--spacing-lg);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            ">
-                <h3 style="
-                    color: #ffffff;
-                    font-size: 1.5rem;
-                    margin-bottom: var(--spacing-md);
-                    text-align: center;
-                ">Soft Skills</h3>
-                
-                <% if (skills && skills.soft && skills.soft.length > 0) { %>
-                    <ul class="skills-list" style="
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: var(--spacing-sm);
-                    ">
-                        <% skills.soft.forEach(skill => { %>
-                            <li class="skill-item" style="
-                                background: rgba(37, 99, 235, 0.1);
-                                color: #ffffff;
-                                padding: var(--spacing-sm) var(--spacing-md);
-                                border-radius: var(--radius-md);
-                                font-size: 0.9rem;
-                                backdrop-filter: blur(5px);
-                                border: 1px solid rgba(255, 255, 255, 0.1);
-                            ">
-                                <%= skill %>
-                            </li>
-                        <% }); %>
-                    </ul>
-                <% } %>
+            <div class="skill-category reveal">
+                <h3>Soft Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-btn">Good Communicator</span>
+                    <span class="skill-btn">Flexible</span>
+                    <span class="skill-btn">Adaptable</span>
+                    <span class="skill-btn">A Team Player</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Add scroll reveal script -->
+<style>
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.skill-category {
+    background: rgba(31, 41, 55, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 1.1rem;
+    padding: 2rem 1.5rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 16px rgba(80,0,180,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill-category h3 {
+    color: #a5b4fc;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7em;
+    justify-content: center;
+}
+.skill-btn {
+    display: inline-block;
+    background: rgba(37, 99, 235, 0.13);
+    color: #e0e7ef;
+    padding: 0.5em 1.2em;
+    border-radius: 0.8em;
+    font-size: 1em;
+    font-weight: 600;
+    border: 1px solid #a5b4fc44;
+    margin-bottom: 0.2em;
+    box-shadow: 0 1px 8px #0002;
+    user-select: none;
+    cursor: default;
+    transition: background 0.18s, color 0.18s;
+    text-shadow: 0 1px 8px #0004;
+}
+.skill-btn:hover {
+    background: #a78bfa;
+    color: #23272f;
+}
+@media (max-width: 700px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 1rem 0;
+    }
+    .skill-category {
+        padding: 1.2rem 0.5rem;
+    }
+}
+</style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const revealElements = document.querySelectorAll('.reveal');
-    
     function revealOnScroll() {
         revealElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-            
             if (elementTop < windowHeight - 100) {
                 element.classList.add('active');
             }
         });
     }
-    
     window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Initial check
+    revealOnScroll();
 });
-</script> 
+</script>
