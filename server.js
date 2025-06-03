@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const expressLayouts = require('express-ejs-layouts');
 const resumeController = require('./src/controllers/resumeController');
 
+
 // Load environment variables
 dotenv.config();
 
