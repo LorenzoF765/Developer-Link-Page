@@ -399,7 +399,7 @@ footer {
 .audio-player-fixed {
     position: fixed;
     bottom: 1.5rem;
-    right: 1.5rem;
+    right: 10vw; /* 10% of the viewport width from the right */
     z-index: 1001;
     background: rgba(31, 41, 55, 0.92);
     border-radius: 1.2em;
