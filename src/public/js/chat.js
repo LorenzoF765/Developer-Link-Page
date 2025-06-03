@@ -3,6 +3,18 @@ class AIChat {
         this.chatContainer = null;
         this.messageList = null;
         this.isOpen = false;
+        this.factoids = [
+            "Did you know? Lorenzo Franco's portfolio features projects in Python, Node.js, React, and Unreal Engine!",
+            "Fun fact: The D&D Initiative Tracker project was built to help manage complex combat scenarios for tabletop games.",
+            "Lorenzo's resume is available as a PDF—just click the document icon on the homepage!",
+            "The background animation on this site uses Vanta.js for a dynamic, interactive effect.",
+            "Lorenzo's GitHub is packed with full-stack, AI, and game development projects. Check it out via the GitHub icon!",
+            "This chatbot is front-end only and doesn't use any AI APIs—just a bit of JavaScript magic.",
+            "Lorenzo enjoys playing D&D with his group, 'The Menagerie of Fools.'",
+            "You can download the D&D Initiative Tracker EXE directly from the Projects page.",
+            "Lorenzo's capstone project, The Neural Notebook, combines Python, Java, React, and Django.",
+            "Want to get in touch? Use the Contact page or any of the social icons at the bottom!"
+        ];
         this.init();
     }
 
@@ -16,7 +28,7 @@ class AIChat {
         this.chatContainer.className = 'chat-container';
         this.chatContainer.innerHTML = `
             <div class="chat-button" tabindex="0" aria-label="Open chat">
-                <img src="images/chat-icon.svg" alt="Chat" />
+                <img src="/images/chat-icon.svg" alt="Chat" />
             </div>
             <div class="chat-box" aria-modal="true" role="dialog">
                 <div class="chat-header">
@@ -40,7 +52,7 @@ class AIChat {
         document.body.appendChild(this.chatContainer);
         this.messageList = this.chatContainer.querySelector('.chat-messages');
         // Initial greeting
-        this.addMessage("Hi! I'm your AI assistant. How can I help you today?", 'assistant');
+        this.addMessage("Hi! I'm your portfolio assistant. Ask me anything about this site or Lorenzo's work!", 'assistant');
     }
 
     addEventListeners() {
@@ -77,7 +89,7 @@ class AIChat {
         sendBtn.addEventListener('click', () => this.sendMessage());
     }
 
-    async sendMessage() {
+    sendMessage() {
         const textarea = this.chatContainer.querySelector('textarea');
         const message = textarea.value.trim();
 
@@ -91,36 +103,17 @@ class AIChat {
         // Show typing indicator
         this.addTypingIndicator();
 
-        try {
-            const response = await this.getAIResponse(message);
+        setTimeout(() => {
             this.removeTypingIndicator();
+            const response = this.getFactoidResponse(message);
             this.addMessage(response, 'assistant');
-        } catch (error) {
-            this.removeTypingIndicator();
-            this.addMessage('Sorry, I encountered an error. Please try again.', 'assistant error');
-        }
+        }, 700);
     }
 
-    async getAIResponse(message) {
-        try {
-            const response = await fetch('/api/chat', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ message })
-            });
-
-            if (!response.ok) {
-                throw new Error('API request failed');
-            }
-
-            const data = await response.json();
-            return data.response;
-        } catch (error) {
-            console.error('Error:', error);
-            throw error;
-        }
+    getFactoidResponse(userMessage) {
+        // Optionally, you can add some keyword-based responses here
+        // For now, always return a random factoid
+        return this.factoids[Math.floor(Math.random() * this.factoids.length)];
     }
 
     addMessage(content, type) {
