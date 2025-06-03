@@ -7,39 +7,31 @@ class AIChat {
     }
 
     init() {
-        // Create chat UI
         this.createChatUI();
-        // Add event listeners
         this.addEventListeners();
     }
 
     createChatUI() {
-        // Create chat container
         this.chatContainer = document.createElement('div');
         this.chatContainer.className = 'chat-container';
         this.chatContainer.innerHTML = `
-            <div class="chat-button">
+            <div class="chat-button" tabindex="0" aria-label="Open chat">
                 <img src="./Assets/Images/chat-icon.png" alt="Chat" />
             </div>
-            <div class="chat-box">
+            <div class="chat-box" aria-modal="true" role="dialog">
                 <div class="chat-header">
                     <h3>AI Assistant</h3>
-                    <button class="minimize-btn">−</button>
+                    <button class="minimize-btn" aria-label="Minimize chat">−</button>
                 </div>
-                <div class="chat-messages">
-                    <div class="message assistant">
-                        <div class="message-content">
-                            Hi! I'm your AI assistant. How can I help you today?
-                        </div>
-                    </div>
-                </div>
+                <div class="chat-messages" aria-live="polite"></div>
                 <div class="chat-input">
                     <textarea 
                         placeholder="Type your message here..." 
                         rows="1"
                         maxlength="500"
+                        aria-label="Type your message"
                     ></textarea>
-                    <button class="send-btn">
+                    <button class="send-btn" aria-label="Send message">
                         <img src="./Assets/Images/send-icon.png" alt="Send" />
                     </button>
                 </div>
@@ -47,6 +39,8 @@ class AIChat {
         `;
         document.body.appendChild(this.chatContainer);
         this.messageList = this.chatContainer.querySelector('.chat-messages');
+        // Initial greeting
+        this.addMessage("Hi! I'm your AI assistant. How can I help you today?", 'assistant');
     }
 
     addEventListeners() {
@@ -57,6 +51,12 @@ class AIChat {
 
         // Toggle chat box
         chatButton.addEventListener('click', () => this.toggleChat());
+        chatButton.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.toggleChat();
+            }
+        });
         minimizeBtn.addEventListener('click', () => this.toggleChat());
 
         // Send message on enter (but allow shift+enter for new lines)
@@ -80,7 +80,7 @@ class AIChat {
     async sendMessage() {
         const textarea = this.chatContainer.querySelector('textarea');
         const message = textarea.value.trim();
-        
+
         if (!message) return;
 
         // Add user message to chat
@@ -93,7 +93,6 @@ class AIChat {
 
         try {
             const response = await this.getAIResponse(message);
-            // Remove typing indicator and add AI response
             this.removeTypingIndicator();
             this.addMessage(response, 'assistant');
         } catch (error) {
@@ -172,10 +171,17 @@ class AIChat {
     toggleChat() {
         this.isOpen = !this.isOpen;
         this.chatContainer.classList.toggle('open', this.isOpen);
+        // Focus textarea when opening
+        if (this.isOpen) {
+            setTimeout(() => {
+                const textarea = this.chatContainer.querySelector('textarea');
+                if (textarea) textarea.focus();
+            }, 200);
+        }
     }
 }
 
 // Initialize chat when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     new AIChat();
-}); 
+});
