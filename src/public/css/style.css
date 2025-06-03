@@ -396,3 +396,28 @@ footer {
     height: 100%;
     z-index: -1;
 } 
+.audio-player-fixed {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1001;
+    background: rgba(31, 41, 55, 0.92);
+    border-radius: 1.2em;
+    box-shadow: 0 2px 12px #0004;
+    padding: 0.5em 1em 0.5em 0.8em;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.audio-player-fixed:hover {
+    background: rgba(80, 70, 180, 0.97);
+}
+
+.audio-player-fixed audio {
+    filter: drop-shadow(0 1px 6px #0006);
+    accent-color: #a78bfa;
+    width: 180px;
+    min-width: 120px;
+    background: transparent;
+}
